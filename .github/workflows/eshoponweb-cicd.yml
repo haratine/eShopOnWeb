@@ -73,7 +73,7 @@ jobs:
     - name: GH-Action-eshoponweb
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.Wap8Q~SZalW3rsMjzPBDqh1lJlbsna7cBBYBQbPr }}
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
@@ -89,6 +89,6 @@ jobs:
     - name: Publish Website to WebApp
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.az-400-org-whaddup  }}
+        app-name: ${{ env.az-400-org-whaddup }}
         package: .net-app
    
