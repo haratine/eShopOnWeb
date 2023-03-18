@@ -78,17 +78,17 @@ jobs:
     # Deploy Azure WebApp using Bicep file
     - name: deploy
       uses: azure/arm-deploy@v1
-      with:
-        subscriptionId: ${{ env.SUBSCRIPTION-ID }}
-        resourceGroupName: ${{ env.RESOURCE-GROUP }}
+      with: 
+        subscriptionId: ${{ env.Wap8Q~SZalW3rsMjzPBDqh1lJlbsna7cBBYBQbPr }}
+        resourceGroupName: ${{ env.rg-az400-eshoponweb-az-400-org-whaddup }}
         template: bicep-template/webapp.bicep
-        parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
+        parameters: 'webAppName=${{ env.az-400-org-whaddup }} location=${{ env.eastus }}'
         failOnStdErr: false   
     
     # Publish website to Azure App Service (WebApp)
     - name: Publish Website to WebApp
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.WEBAPP-NAME  }}
+        app-name: ${{ env.az-400-org-whaddup  }}
         package: .net-app
    
