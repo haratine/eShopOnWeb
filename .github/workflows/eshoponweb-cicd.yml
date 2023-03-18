@@ -47,7 +47,7 @@ jobs:
         name: bicep-template
         path: ${{ env.TEMPLATE-FILE }}
         
-  # Use Bicep to deploy infrastructure + Publish webapp 
+  # Use Bicep to deploy infrastructure + Publish web
   deploy:
     runs-on: ubuntu-latest
     needs: buildandtest
@@ -70,7 +70,7 @@ jobs:
         path: bicep-template
         
    #Login in your azure subscription using a service principal (credentials stored as GitHub Secret in repo)
-    - name: ajharatine@gmail.com
+    - name: GH-Action-eshoponweb
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
