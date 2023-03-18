@@ -45,7 +45,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: bicep-template
-        path: ${{ env.TEMPLATE-FILE }}
+        path: ${{ env.eshoponweb-cicd.yml }}
         
   # Use Bicep to deploy infrastructure + Publish web
   deploy:
